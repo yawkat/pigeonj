@@ -32,7 +32,7 @@ public class DatagramRouter implements Driver {
         on.children()
                 .filter(c -> !c.equals(except))
                 .forEach(c -> {
-                    on.publish(datagram);
+                    c.publish(datagram);
                     transmit(datagram, except, c);
                 });
     }
