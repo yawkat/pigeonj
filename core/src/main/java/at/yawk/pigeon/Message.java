@@ -2,12 +2,12 @@ package at.yawk.pigeon;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import lombok.Getter;
+import lombok.Value;
 
 /**
  * @author yawkat
  */
-@Getter
+@Value
 public class Message {
     private final ByteBuf message;
 

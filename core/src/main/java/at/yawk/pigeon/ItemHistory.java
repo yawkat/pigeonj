@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 
 /**
  * @author yawkat
@@ -19,7 +20,7 @@ public class ItemHistory<T> {
     public ItemHistory(int chunkCount, int chunkSize) {
         this.chunkCount = chunkCount;
         this.chunkSize = chunkSize;
-        this.chunks = new Chunk[chunkCount];
+        this.chunks = Stream.generate(Chunk::new).limit(chunkSize).toArray(Chunk[]::new);
         this.currentChunk = new AtomicInteger(0);
     }
 

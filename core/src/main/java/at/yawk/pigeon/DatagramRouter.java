@@ -25,7 +25,7 @@ public class DatagramRouter implements Driver {
 
     @Override
     public void publish(Datagram datagram) {
-        transmit(datagram, null, this);
+        received(datagram, null);
     }
 
     private void transmit(Datagram datagram, Driver except, Driver on) {

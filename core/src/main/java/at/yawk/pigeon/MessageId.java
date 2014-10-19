@@ -3,12 +3,12 @@ package at.yawk.pigeon;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import java.util.Random;
-import lombok.Getter;
+import lombok.Value;
 
 /**
  * @author yawkat
  */
-@Getter
+@Value
 public class MessageId {
     private static final int DEFAULT_LENGTH = 16;
     private static final Random RNG = new Random();
