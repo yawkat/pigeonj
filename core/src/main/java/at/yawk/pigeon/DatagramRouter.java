@@ -1,6 +1,7 @@
 package at.yawk.pigeon;
 
 import java.util.Collection;
+import java.util.stream.Stream;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -15,6 +16,11 @@ public class DatagramRouter implements Driver {
         if (history.push(datagram.getId())) {
             transmit(datagram, on, this);
         }
+    }
+
+    @Override
+    public Stream<Driver> children() {
+        return drivers.stream();
     }
 
     @Override
