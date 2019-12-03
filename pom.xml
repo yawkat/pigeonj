@@ -9,7 +9,7 @@
     <groupId>at.yawk.pigeonj</groupId>
     <artifactId>pigeonj-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <name>pigeonj</name>
     <description>Generalized pubsub API</description>
@@ -34,7 +34,7 @@
         <connection>scm:git:https://github.com/yawkat/pigeonj.git</connection>
         <developerConnection>scm:git:git@github.com:yawkat/pigeonj.git</developerConnection>
         <url>http://github.com/yawkat/pigeonj/tree/master</url>
-        <tag>pigeonj-parent-1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
